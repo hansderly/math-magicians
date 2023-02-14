@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
 import React from 'react';
 import Button from '../button/Button';
 import ShowBox from '../showbox/ShowBox';
