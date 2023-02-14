@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, {} from 'react';
 import PropTypes from 'prop-types';
 import styles from './Button.module.css';
@@ -14,6 +13,9 @@ const Button = ({
 Button.prototype = {
   children: PropTypes.string,
   value: PropTypes.string,
+  onClick: PropTypes.func,
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Button;
