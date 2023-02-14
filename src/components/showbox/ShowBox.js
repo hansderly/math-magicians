@@ -7,8 +7,8 @@ const ShowBox = ({ children }) => (
   <div className={styles.container}>{children}</div>
 );
 
-ShowBox.prototype = {
-  children: PropTypes.string,
+ShowBox.propTypes = {
+  children: PropTypes.string.isRequired,
 };
 
 export default ShowBox;

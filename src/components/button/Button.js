@@ -10,12 +10,12 @@ const Button = ({
   </button>
 );
 
-Button.prototype = {
-  children: PropTypes.string,
-  value: PropTypes.string,
-  onClick: PropTypes.func,
-  color: PropTypes.string,
-  size: PropTypes.string,
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  color: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
 };
 
 export default Button;
