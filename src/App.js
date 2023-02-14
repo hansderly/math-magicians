@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './components/button/Button';
+import { Calculator } from './components';
 
-const App = () => <Button />;
+const App = () => <Calculator />;
 
 export default App;
