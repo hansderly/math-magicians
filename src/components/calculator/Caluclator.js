@@ -40,11 +40,12 @@ const Calculator = () => {
   const handleClick = (e) => {
     console.log(e.target.innerText);
   };
+
   return (
     <>
       <ShowBox>0</ShowBox>
       {calculator.map((row) => (
-        <div key={row} className={styles.row}>
+        <div key={Math.random()} className={styles.row}>
           {Object.values(row).map((el, i) => (
             <Button size={el === 0 ? 'xl' : ''} key={el} color={i === 3 ? '#F5913E' : ''} onClick={handleClick}>{el}</Button>
           ))}
