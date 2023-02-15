@@ -8,7 +8,7 @@ const ShowBox = ({ children }) => (
 );
 
 ShowBox.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default ShowBox;
