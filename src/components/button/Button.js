@@ -5,10 +5,9 @@ import styles from './Button.module.css';
 const Button = ({
   children, onClick, color = '#e0e0e0', size,
 }) => {
-  // eslint-disable-next-line no-param-reassign
-  color = children === '=' ? '#F5913E' : color;
+  const col = children === '=' ? '#F5913E' : color;
   return (
-    <button onClick={onClick} type="button" className={styles.container} style={{ width: size === 'xl' && '240px', backgroundColor: color }}>
+    <button onClick={onClick} type="button" className={styles.container} style={{ width: size === 'xl' && '240px', backgroundColor: col }}>
       {children}
     </button>
   );
