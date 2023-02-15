@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../button/Button';
 import ShowBox from '../showbox/ShowBox';
+import { calculate } from '../../logic';
 
 import styles from './Calculator.module.css';
 
 const Calculator = () => {
+  const [result, setResult] = useState(0);
+
   const calculator = [
     {
       ac: 'AC',
@@ -38,12 +41,12 @@ const Calculator = () => {
   ];
 
   const handleClick = (e) => {
-    console.log(e.target.innerText);
+    setResult((prevState) => calculate(prevState, e.target.innerText));
   };
 
   return (
     <>
-      <ShowBox>0</ShowBox>
+      <ShowBox>{result.next || result.total || 0}</ShowBox>
       {calculator.map((row) => (
         <div key={Math.random()} className={styles.row}>
           {Object.values(row).map((el, i) => (
