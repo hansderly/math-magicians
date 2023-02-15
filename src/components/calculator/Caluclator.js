@@ -13,7 +13,7 @@ const Calculator = () => {
       ac: 'AC',
       plusminus: '+/-',
       modulo: '%',
-      divide: '/',
+      divide: '÷',
     },
     {
       seven: 7,
