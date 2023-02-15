@@ -5,39 +5,51 @@ import ShowBox from '../showbox/ShowBox';
 import styles from './Calculator.module.css';
 
 const Calculator = () => {
-  const handleClick = () => {};
+  const calculator = [
+    {
+      ac: 'AC',
+      plusminus: '+/-',
+      modulo: '%',
+      divide: '/',
+    },
+    {
+      seven: 7,
+      eight: 8,
+      nine: 9,
+      multiply: 'x',
+    },
+    {
+      four: 4,
+      five: 5,
+      six: 6,
+      minus: '-',
+    },
+    {
+      one: 1,
+      two: 2,
+      three: 3,
+      plus: '+',
+    },
+    {
+      zero: 0,
+      dot: '.',
+      equal: '=',
+    },
+  ];
+
+  const handleClick = (e) => {
+    console.log(e.target.innerText);
+  };
   return (
     <>
       <ShowBox>0</ShowBox>
-      <div className={styles.row}>
-        <Button onClick={handleClick}>AC</Button>
-        <Button onClick={handleClick}>+/-</Button>
-        <Button onClick={handleClick}>%</Button>
-        <Button onClick={handleClick} color="#F5913E">/</Button>
-      </div>
-      <div className={styles.row}>
-        <Button onClick={handleClick}>7</Button>
-        <Button onClick={handleClick}>8</Button>
-        <Button onClick={handleClick}>9</Button>
-        <Button onClick={handleClick} color="#F5913E">x</Button>
-      </div>
-      <div className={styles.row}>
-        <Button onClick={handleClick}>4</Button>
-        <Button onClick={handleClick}>5</Button>
-        <Button onClick={handleClick}>6</Button>
-        <Button onClick={handleClick} color="#F5913E">-</Button>
-      </div>
-      <div className={styles.row}>
-        <Button onClick={handleClick}>3</Button>
-        <Button onClick={handleClick}>2</Button>
-        <Button onClick={handleClick}>1</Button>
-        <Button onClick={handleClick} color="#F5913E">+</Button>
-      </div>
-      <div className={styles.row}>
-        <Button onClick={handleClick} size="xl">0</Button>
-        <Button onClick={handleClick}>.</Button>
-        <Button onClick={handleClick} color="#F5913E">=</Button>
-      </div>
+      {calculator.map((row) => (
+        <div key={row} className={styles.row}>
+          {Object.values(row).map((el, i) => (
+            <Button size={el === 0 ? 'xl' : ''} key={el} color={i === 3 ? '#F5913E' : ''} onClick={handleClick}>{el}</Button>
+          ))}
+        </div>
+      ))}
     </>
   );
 };
