@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../button/Button';
 import ShowBox from '../showbox/ShowBox';
-import { calculate } from '../../logic';
+import calculate from '../../logic';
 
 import styles from './Calculator.module.css';
 
