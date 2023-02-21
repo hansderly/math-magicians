@@ -1,8 +1,11 @@
 import React from 'react';
+import { Screen } from '../../components';
 
 function Calculator() {
   return (
-    <div>Calculator</div>
+    <Screen>
+      <div>Calculator</div>
+    </Screen>
   );
 }
 

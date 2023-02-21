@@ -1,8 +1,11 @@
 import React from 'react';
+import { Screen } from '../../components';
 
 function Quote() {
   return (
-    <div>Quote</div>
+    <Screen>
+      <div>Quote</div>
+    </Screen>
   );
 }
 

@@ -1,8 +1,11 @@
 import React from 'react';
+import { Screen } from '../../components';
 
 function Home() {
   return (
-    <div>Home</div>
+    <Screen>
+      <div>Home</div>
+    </Screen>
   );
 }
 
