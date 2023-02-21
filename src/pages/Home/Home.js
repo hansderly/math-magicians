@@ -2,7 +2,7 @@ import React from 'react';
 import { Screen } from '../../components';
 
 import styles from './Home.module.css';
-import Side from '../../assets/images/side2.svg';
+import Side from '../../assets/images/side.png';
 
 function Home() {
   return (
