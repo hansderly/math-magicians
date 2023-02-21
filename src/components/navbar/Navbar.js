@@ -12,13 +12,13 @@ function Navbar() {
       <nav className={styles.navbar}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link className={styles.Link} to="/">Home</Link>
           </li>
           <li>
-            <Link to="/calculator">Calculator</Link>
+            <Link className={styles.Link} to="/calculator">Calculator</Link>
           </li>
           <li>
-            <Link to="/quote">Quote</Link>
+            <Link className={styles.Link} to="/quote">Quote</Link>
           </li>
         </ul>
       </nav>
