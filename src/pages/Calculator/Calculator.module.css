@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+
+.container p {
+  font-size: 70px;
+}
