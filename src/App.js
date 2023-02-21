@@ -1,6 +1,11 @@
 import React from 'react';
-import { Calculator } from './components';
+import { Navbar, Calculator } from './components';
 
-const App = () => <Calculator />;
+const App = () => (
+  <>
+    <Navbar />
+    <Calculator />
+  </>
+);
 
 export default App;

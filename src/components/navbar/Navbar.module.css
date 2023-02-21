@@ -1,0 +1,12 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+}
+
+.navbar > ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
