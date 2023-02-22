@@ -16,4 +16,14 @@ describe('Calculate', () => {
       operation: null,
     });
   });
+
+  it('Should append the number to next if there is no operation', () => {
+    const result = calculate({ total: null, next: 5, operation: 'null' }, '2');
+
+    expect(result).toStrictEqual({
+      total: null,
+      next: '52',
+      operation: 'null',
+    });
+  });
 });
