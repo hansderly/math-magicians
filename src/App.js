@@ -5,8 +5,8 @@ import { Home, Quote, Calculator } from './pages';
 
 const App = () => (
   <>
+    <Navbar />
     <Routes>
-      <Navbar />
       <Route path="/" element={<Home />} />
       <Route path="/calculator" element={<Calculator />} />
       <Route path="/quote" element={<Quote />} />
