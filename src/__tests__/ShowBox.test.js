@@ -1,11 +1,10 @@
-
 import { render, screen } from '@testing-library/react';
-import { Calculator } from '../components';
+import { ShowBox } from '../components';
 
 it('should', () => {
-  render(<Calculator />);
+  render(<ShowBox>0</ShowBox>);
 
-  const buttons = screen.getAllByRole('button');
+  const showbox = screen.getByText(/0/i);
 
-  expect(buttons).toHaveLength(19);
+  expect(showbox.innerHTML).toBe('0');
 });
