@@ -1,10 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Navbar } from '../components';
 
 it('should', () => {
-  render(<Navbar />);
+  render(
+    <Router>
+      <Navbar />
+    </Router>,
+  );
 
-  const linkElement = screen.getByRole('link');
-
-  expect(linkElement.length).toBe(3);
+  const listItem = screen.getAllByRole('listitem');
+  expect(listItem).toHaveLength(3);
 });
