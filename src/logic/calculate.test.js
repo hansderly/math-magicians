@@ -26,4 +26,20 @@ describe('Calculate', () => {
       operation: 'null',
     });
   });
+  
+  it('should return the opposite sign of the number', () => {
+    const obj = {
+      total: '42',
+      next: null,
+      operation: null,
+    };
+
+    const buttonName = '+/-';
+
+    expect(calculate(obj, buttonName)).toStrictEqual({
+      total: '-42',
+      next: null,
+      operation: null,
+    });
+  });
 });
