@@ -46,7 +46,7 @@ const Calculator = () => {
 
   return (
     <>
-      <ShowBox>{result.next || result.total || 0}</ShowBox>
+      <ShowBox data-testid="showBox">{result.next || result.total || 0}</ShowBox>
       {calculator.map((row) => (
         <div key={Math.random()} className={styles.row}>
           {Object.values(row).map((el, i) => (
