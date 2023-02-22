@@ -26,7 +26,7 @@ describe('Calculate', () => {
       operation: 'null',
     });
   });
-  
+
   it('should return the opposite sign of the number', () => {
     const obj = {
       total: '42',
@@ -38,6 +38,22 @@ describe('Calculate', () => {
 
     expect(calculate(obj, buttonName)).toStrictEqual({
       total: '-42',
+      next: null,
+      operation: null,
+    });
+  });
+
+  it('should return total of the operation when the = button has pressed', () => {
+    const obj = {
+      total: '42',
+      next: '2',
+      operation: '+',
+    };
+
+    const buttonName = '=';
+
+    expect(calculate(obj, buttonName)).toStrictEqual({
+      total: '44',
       next: null,
       operation: null,
     });
